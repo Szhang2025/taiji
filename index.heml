@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taijiquan · 太极拳 · introduction & 5‑day training</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;700&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f8f5f0;
+      font-family: 'Inter', 'Noto Serif SC', serif;
+      color: #1e2b2b;
+      line-height: 1.5;
+      padding: 2rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1100px;
+      width: 100%;
+      background: rgba(255, 250, 240, 0.7);
+      backdrop-filter: blur(2px);
+      border-radius: 3rem 1rem 3rem 1rem;
+      padding: 2.5rem 2.2rem;
+      box-shadow: 0 20px 40px -12px rgba(30, 40, 30, 0.25);
+      border: 1px solid #e7dfd3;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem 1.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+      border-bottom: 2px solid #d6cdbc;
+      padding-bottom: 1.5rem;
+    }
+
+    .yin-yang {
+      display: inline-block;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, #f0ece4 50%, #1e2b2b 50%);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      position: relative;
+      flex-shrink: 0;
+      border: 2px solid #1e2b2b;
+    }
+    .yin-yang::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: #1e2b2b;
+      border-radius: 50%;
+      top: 10px;
+      left: 10px;
+      box-shadow: 30px 30px 0 #f0ece4;
+    }
+    .yin-yang::before {
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background: #f0ece4;
+      border-radius: 50%;
+      top: 18px;
+      left: 18px;
+      z-index: 2;
+      box-shadow: 30px 30px 0 #1e2b2b;
+    }
+
+    .title-group h1 {
+      font-family: 'Noto Serif SC', 'Inter', serif;
+      font-weight: 700;
+      font-size: 2.6rem;
+      letter-spacing: 2px;
+      color: #1e2b2b;
+      line-height: 1.1;
+    }
+    .title-group h1 small {
+      font-weight: 300;
+      font-size: 1.3rem;
+      color: #5b6f6f;
+      margin-left: 0.75rem;
+      font-family: 'Inter', sans-serif;
+    }
+    .title-group .sub {
+      font-size: 0.95rem;
+      color: #4f5e5e;
+      letter-spacing: 1.5px;
+      font-weight: 300;
+      border-left: 3px solid #b9ab95;
+      padding-left: 1rem;
+      margin-top: 0.2rem;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 2.5rem;
+      margin: 2rem 0 2.5rem;
+    }
+
+    .principle-card {
+      background: #fcf9f4;
+      padding: 1.8rem 1.8rem 2rem;
+      border-radius: 2rem 0.5rem 2rem 0.5rem;
+      box-shadow: inset 0 1px 8px rgba(255, 255, 255, 0.9), 0 6px 16px rgba(30, 40, 30, 0.08);
+      border: 1px solid #e3d9cb;
+    }
+
+    .principle-card h2 {
+      font-weight: 600;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #1e3d3d;
+      border-bottom: 2px dotted #cdc0ad;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.2rem;
+    }
+    .principle-card h2 span {
+      background: #1e2b2b;
+      color: #f5efe6;
+      font-size: 1rem;
+      padding: 0.1rem 0.7rem;
+      border-radius: 40px;
+      font-weight: 400;
+    }
+
+    .principle-list {
+      list-style: none;
+    }
+    .principle-list li {
+      padding: 0.6rem 0 0.6rem 2rem;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%233b5a5a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>') left center no-repeat;
+      background-size: 1.2rem;
+      border-bottom: 1px solid #eee5d8;
+    }
+    .principle-list li:last-child {
+      border-bottom: 0;
+    }
+
+    .benefits-box {
+      background: #e7ede7;
+      padding: 1.8rem 1.8rem 1.5rem;
+      border-radius: 2rem 0.5rem 2rem 0.5rem;
+      border: 1px solid #d0d9cd;
+    }
+    .benefits-box h3 {
+      font-weight: 600;
+      font-size: 1.4rem;
+      color: #1f3a3a;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .benefit-items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem 1rem;
+    }
+    .benefit-tag {
+      background: white;
+      padding: 0.4rem 1rem 0.4rem 1.8rem;
+      border-radius: 40px;
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: #1f3a3a;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+      border: 1px solid #ccd7cc;
+      position: relative;
+    }
+    .benefit-tag::before {
+      content: "☯";
+      position: absolute;
+      left: 8px;
+      top: 2px;
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+
+    .quote-block {
+      margin: 2rem 0 1.8rem;
+      background: #f2ede4;
+      padding: 1.8rem 2.2rem;
+      border-radius: 80px 10px 80px 10px;
+      border-left: 6px solid #7a8f7a;
+      font-style: italic;
+      font-size: 1.2rem;
+      font-weight: 300;
+      color: #1d2f2f;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+    }
+    .quote-block strong {
+      font-weight: 600;
+      color: #264b4b;
+    }
+
+    .routine-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1.8rem;
+      margin-top: 1.5rem;
+      border-top: 2px solid #d8cfbf;
+      padding-top: 2rem;
+    }
+
+    .routine-card {
+      flex: 1 1 200px;
+      background: #fcf9f4;
+      padding: 1.5rem 1rem;
+      border-radius: 2rem 0.5rem 2rem 0.5rem;
+      border: 1px solid #ddd1c0;
+      text-align: center;
+      transition: 0.2s ease;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+    }
+    .routine-card:hover {
+      background: #f6f0e7;
+      border-color: #b3a992;
+      transform: translateY(-3px);
+    }
+    .routine-card .step-number {
+      font-size: 2rem;
+      font-weight: 300;
+      color: #8b7d68;
+      font-family: 'Noto Serif SC', serif;
+      border-bottom: 1px solid #dacfc0;
+      padding-bottom: 0.3rem;
+      margin-bottom: 0.7rem;
+    }
+    .routine-card h4 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #1f3838;
+      margin-bottom: 0.3rem;
+    }
+    .routine-card p {
+      font-size: 0.9rem;
+      color: #405757;
+      font-weight: 300;
+    }
+
+    .training-section {
+      margin: 2.5rem 0 1.8rem;
+    }
+    .training-section h2 {
+      font-weight: 600;
+      font-size: 1.8rem;
+      color: #1e3d3d;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      border-bottom: 2px solid #d6cdbc;
+      padding-bottom: 0.6rem;
+      margin-bottom: 1.8rem;
+    }
+    .training-section h2 span {
+      background: #1e2b2b;
+      color: #f5efe6;
+      font-size: 1rem;
+      padding: 0.1rem 0.9rem;
+      border-radius: 40px;
+      font-weight: 400;
+    }
+
+    .day-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .day-card {
+      background: #fcf9f4;
+      border: 1px solid #e3d9cb;
+      border-radius: 1.8rem 0.5rem 1.8rem 0.5rem;
+      padding: 1.5rem 1rem 1.2rem;
+      transition: 0.2s ease;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.02);
+      display: flex;
+      flex-direction: column;
+    }
+    .day-card:hover {
+      background: #f6f0e7;
+      border-color: #b3a992;
+      transform: translateY(-4px);
+    }
+    .day-card .day-number {
+      font-size: 1.5rem;
+      font-weight: 300;
+      color: #8b7d68;
+      font-family: 'Noto Serif SC', serif;
+      border-bottom: 1px solid #dacfc0;
+      padding-bottom: 0.3rem;
+      margin-bottom: 0.6rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .day-card .day-number small {
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: #5f6f6f;
+      font-family: 'Inter', sans-serif;
+    }
+    .day-card h4 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #1f3838;
+      margin: 0.2rem 0 0.3rem;
+    }
+    .day-card .focus {
+      font-size: 0.9rem;
+      color: #3f5a5a;
+      font-weight: 300;
+      margin-bottom: 0.8rem;
+      line-height: 1.4;
+    }
+    .day-card .video-link {
+      margin-top: auto;
+      background: #e7ede7;
+      border-radius: 40px;
+      padding: 0.4rem 0.8rem;
+      text-align: center;
+      font-size: 0.85rem;
+      border: 1px solid #ccd7cc;
+      transition: 0.15s;
+    }
+    .day-card .video-link + .video-link {
+      margin-top: 6px;
+    }
+    .day-card .video-link a {
+      text-decoration: none;
+      color: #1d3a3a;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+    .day-card .video-link a:hover {
+      color: #0f2a2a;
+      text-decoration: underline;
+    }
+    .day-card .video-link .placeholder {
+      color: #6a7f7f;
+      font-style: italic;
+      font-weight: 300;
+    }
+
+    .footer-note {
+      margin-top: 2.8rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #5c6f6f;
+      border-top: 1px solid #d6ccbc;
+      padding-top: 1.5rem;
+      letter-spacing: 0.4px;
+    }
+
+    @media (max-width: 750px) {
+      .intro-grid {
+        grid-template-columns: 1fr;
+        gap: 1.8rem;
+      }
+      .container {
+        padding: 1.8rem 1.2rem;
+      }
+      .title-group h1 {
+        font-size: 2rem;
+      }
+      .title-group h1 small {
+        font-size: 1rem;
+        display: block;
+        margin-left: 0;
+      }
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .quote-block {
+        font-size: 1rem;
+        padding: 1rem 1.5rem;
+        border-radius: 40px 10px 40px 10px;
+      }
+      .day-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    @media (max-width: 480px) {
+      .day-grid {
+        grid-template-columns: 1fr;
+      }
+      .routine-section {
+        flex-direction: column;
+      }
+      .yin-yang {
+        width: 48px;
+        height: 48px;
+      }
+      .yin-yang::after {
+        width: 16px;
+        height: 16px;
+        top: 8px;
+        left: 8px;
+        box-shadow: 24px 24px 0 #f0ece4;
+      }
+      .yin-yang::before {
+        width: 6px;
+        height: 6px;
+        top: 14px;
+        left: 14px;
+        box-shadow: 24px 24px 0 #1e2b2b;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <!-- header -->
+  <div class="header">
+    <div class="yin-yang" aria-hidden="true"></div>
+    <div class="title-group">
+      <h1>太极拳 <small>Taijiquan</small></h1>
+      <div class="sub">· supreme ultimate fist ·  internal martial art ·</div>
+    </div>
+  </div>
+
+  <!-- INTRO: principles + benefits -->
+  <div class="intro-grid">
+    <div class="principle-card">
+      <h2>☯  core principles <span>三</span></h2>
+      <ul class="principle-list">
+        <li><strong>松 (Sōng)</strong> — relax, release tension; softness over rigidity</li>
+        <li><strong>静 (Jìng)</strong> — stillness of mind, inner calm, focused awareness</li>
+        <li><strong>慢 (Màn)</strong> — slow, deliberate movement; continuity without pause</li>
+        <li><strong>圆 (Yuán)</strong> — circular, spiral motion; whole-body integration</li>
+        <li><strong>阴阳 (Yīn-Yáng)</strong> — balance of opposite forces: empty &amp; full, hard &amp; soft</li>
+      </ul>
+      <div style="margin-top: 1.2rem; font-size: 0.95rem; color: #3b4f4f; background: #eff0e8; padding: 0.5rem 1rem; border-radius: 60px; display: inline-block;">
+        “移动如江河，安静如山岳”
+      </div>
+    </div>
+
+    <div class="benefits-box">
+      <h3>🌿  health &amp; harmony</h3>
+      <div class="benefit-items">
+        <span class="benefit-tag">improves balance</span>
+        <span class="benefit-tag">reduces stress</span>
+        <span class="benefit-tag">mindfulness</span>
+        <span class="benefit-tag">joint mobility</span>
+        <span class="benefit-tag">core strength</span>
+        <span class="benefit-tag">breath coordination</span>
+        <span class="benefit-tag">posture awareness</span>
+        <span class="benefit-tag">inner peace</span>
+        <span class="benefit-tag">energy flow (Qi)</span>
+      </div>
+      <p style="margin-top: 1.4rem; font-size: 0.95rem; color: #1f3a3a; border-top: 1px solid #c6d2c6; padding-top: 1rem;">
+        <span style="font-weight: 600;">Taijiquan</span> is a gentle, low-impact practice suitable for all ages. 
+        Rooted in Daoist philosophy and traditional Chinese medicine, it cultivates both physical and mental resilience.
+      </p>
+    </div>
+  </div>
+
+  <!-- quote -->
+  <div class="quote-block">
+    <strong>“The soft overcomes the hard; the slow overcomes the fast.”</strong> 
+    — Taijiquan classics. Each posture flows into the next, like a great river.
+  </div>
+
+  <!-- BASIC 8-FORM ROUTINE -->
+  <div style="margin-top: 0.5rem;">
+    <h3 style="font-weight: 500; font-size: 1.5rem; letter-spacing: 1px; color: #1d3737; display: flex; align-items: center; gap: 0.6rem;">
+      <span style="background: #1e2b2b; color: #f1efe7; padding: 0.1rem 1rem; border-radius: 40px; font-size: 1.2rem;">⏳</span> 
+      basic 8‑form routine
+    </h3>
+    <div class="routine-section">
+      <div class="routine-card">
+        <div class="step-number">起式</div>
+        <h4>Opening</h4>
+        <p>Stand still, align posture, calm breath — begin with <em>wuji</em>.</p>
+      </div>
+      <div class="routine-card">
+        <div class="step-number">野马分鬃</div>
+        <h4>Wild Horse</h4>
+        <p>Part the wild horse's mane — spread arms, shift weight, open the chest.</p>
+      </div>
+      <div class="routine-card">
+        <div class="step-number">白鹤亮翅</div>
+        <h4>White Crane</h4>
+        <p>Spread wings like a crane — rise on toes, extend arms, feel lightness.</p>
+      </div>
+      <div class="routine-card">
+        <div class="step-number">搂膝拗步</div>
+        <h4>Brush Knee</h4>
+        <p>Brush knee and twist step — coordinated push, deflecting energy.</p>
+      </div>
+      <div class="routine-card">
+        <div class="step-number">手挥琵琶</div>
+        <h4>Strum Lute</h4>
+        <p>Hands like playing the pipa — gather, shift, and project softly.</p>
+      </div>
+      <div class="routine-card">
+        <div class="step-number">倒卷肱</div>
+        <h4>Repulse Monkey</h4>
+        <p>Step back, whirl arms — repulse with circular, retreating motion.</p>
+      </div>
+    </div>
+    <p style="font-size: 0.9rem; margin-top: 1rem; color: #3b5555; background: #eaeee5; padding: 0.4rem 1.2rem; border-radius: 50px; display: inline-block;">
+      🌀 Each form flows continuously; breathe naturally, sink the Qi.
+    </p>
+  </div>
+
+  <!-- 5-DAY TRAINING PLAN -->
+  <div class="training-section">
+    <h2>🧘  daily practice <span>五日</span></h2>
+    <div class="day-grid">
+      <!-- day 1 – order swapped: teaching first, then main practice -->
+      <div class="day-card">
+        <div class="day-number">Day 1 <small>起势</small></div>
+        <h4>旋转乾坤 · 准备</h4>
+        <div class="focus">Opening · rotate the universe · 唤醒肾气</div>
+        <div class="video-link">
+          <a href="https://www.youtube.com/watch?v=Ict-192zuPQ" target="_blank" rel="noopener">▶&nbsp; preparation + teaching</a>
+        </div>
+        <div class="video-link">
+          <a href="https://www.youtube.com/watch?v=pku2gwCoEqw" target="_blank" rel="noopener">▶&nbsp; main practice</a>
+        </div>
+      </div>
+      <!-- day 2 -->
+      <div class="day-card">
+        <div class="day-number">Day 2 <small>升阳</small></div>
+        <h4>攀足固肾</h4>
+        <div class="focus">补肾排湿 · 驱寒 · 固本培元</div>
+        <div class="video-link">
+          <a href="https://www.youtube.com/watch?v=iexSVw7JbLU" target="_blank" rel="noopener">▶&nbsp; watch on YouTube</a>
+        </div>
+      </div>
+      <!-- day 3 -->
+      <div class="day-card">
+        <div class="day-number">Day 3 <small>舒肩</small></div>
+        <h4>仙鹤点头</h4>
+        <div class="focus">舒缓肩颈 · 强腰健腿 · 鹤首导引</div>
+        <div class="video-link">
+          <a href="https://www.youtube.com/watch?v=wkIsvoCa7Bk" target="_blank" rel="noopener">▶&nbsp; watch on YouTube</a>
+        </div>
+      </div>
+      <!-- day 4 – placeholder -->
+      <div class="day-card">
+        <div class="day-number">Day 4 <small>???</small></div>
+        <h4>云手 · 单鞭</h4>
+        <div class="focus">Cloud hands · single whip · 协调全身</div>
+        <div class="video-link">
+          <span class="placeholder">🔗  link coming soon</span>
+        </div>
+      </div>
+      <!-- day 5 – placeholder -->
+      <div class="day-card">
+        <div class="day-number">Day 5 <small>???</small></div>
+        <h4>收势 · 合太极</h4>
+        <div class="focus">Closing · gather energy · 返归无极</div>
+        <div class="video-link">
+          <span class="placeholder">🔗  link coming soon</span>
+        </div>
+      </div>
+    </div>
+    <p style="margin-top: 1.2rem; font-size: 0.9rem; color: #3b5555; background: #eaeee5; padding: 0.3rem 1.2rem; border-radius: 50px; display: inline-block;">
+      🌀  follow each day's video, breathe deeply, and move with intention.
+    </p>
+  </div>
+
+  <!-- footer -->
+  <div class="footer-note">
+    <span style="font-weight: 400;">☯ 太极拳 ·  Taijiquan  ·  moving meditation  ·  五日功法  ·  ☯</span><br>
+    <span style="opacity: 0.7;">“In every movement, the whole body is light and agile.” — Wang Zongyue</span>
+  </div>
+</div>
+</body>
+</html>
